@@ -10,7 +10,7 @@ export const HelpComponent =()=>{
             </div>
             <div className="d-flex flex-column justify-content-start align-items-start wt-50 left-help">
                 <Text
-                    style="ln-62 fw-bold ln-64 h-3rem mb-3 text-start justify"
+                    style="ln-62 fw-bold ln-64 wereHere mb-3 text-start justify"
                     value="We’re here to help"
                 />
                 <Text

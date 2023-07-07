@@ -32,6 +32,9 @@ textarea{
 .fgw-light{
   font-weight: 400;
 }
+.wereHere{
+  font-size: 3rem;
+}
 .cursor{
   cursor: pointer;
 }
@@ -359,6 +362,9 @@ textarea{
 }
 }
 @media only screen and (min-width:320px) and (max-width:570px){
+  .wereHere{
+    font-size: calc(1.3rem + .6vw)!important;
+  }
   .filterImg{
     padding: 2rem;
   }
@@ -413,6 +419,10 @@ textarea{
   .p-x-5,.px-5,.px-6{
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+  .mx-4{
+    margin-left:1rem ;
+    margin-right: 1rem;
   }
 .px-10{
   padding-right: 1rem;
