@@ -142,8 +142,8 @@ textarea{
   flex-wrap: wrap;
 }
 .px-10{
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 .w-fit-content{
   width:fit-content;
@@ -211,13 +211,13 @@ textarea{
   color:white;
 }
 .ps-10{
-  padding-left: 4rem;
+  padding-left: 7rem;
 }
 .bg-gainsboro{
   background-color: #F1F1F1;
 }
 .pe-10{
-  padding-right: 4rem;
+  padding-right: 7rem;
 }
 .py-10{
   padding-top: 4rem;
