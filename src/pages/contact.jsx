@@ -2,7 +2,7 @@ import { Layout } from "../components/Layout"
 import { Contact } from "../components/contact/contactSEction"
 import { IntroSection } from "../components/introsection"
 import { Nav } from "../components/nav"
-import imageBg from "../assets/image (1).svg";
+import imageBg from "../assets/Image (1).svg";
 
 export const ContactPage=()=>{
     return(
