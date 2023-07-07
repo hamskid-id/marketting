@@ -34,6 +34,7 @@ textarea{
 }
 .wereHere{
   font-size: 3rem;
+  margin-bottom: 0rem;
 }
 .cursor{
   cursor: pointer;
@@ -364,6 +365,7 @@ textarea{
 @media only screen and (min-width:320px) and (max-width:570px){
   .wereHere{
     font-size: calc(1.3rem + .6vw)!important;
+    margin-bottom: 0rem;
   }
   .filterImg{
     padding: 2rem;
