@@ -1,6 +1,6 @@
 import { Layout } from "../components/Layout"
 import { IntroSection } from "../components/introsection"
-import imageBg from "../assets/image (1).svg";
+import imageBg from "../assets/Image (1).svg";
 import { Nav } from "../components/nav";
 import { Activities } from "../components/Activities";
 import { HelpComponent } from "../components/helpSection";
