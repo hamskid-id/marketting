@@ -13,7 +13,7 @@ export const BlogCard =({
         <div className="col-md-4 col-lg-3 mb-2 col-sm-6"
         >
             <RevealAnimation>
-                <div className="border-gainsboro rounded m-3">
+                <div className="border bg-white rounded m-3">
                     <RevealAnimation>
                         <div className="w-fit-content">
                             <img 
