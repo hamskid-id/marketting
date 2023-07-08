@@ -6,7 +6,7 @@ export const ProductSection=({
     collpase
 })=>{
     return(
-        <>
+        <div className="bg-ghostwhite py-3">
         <div className="row w-100 p-4">
                 {
                     prod.map((prod,index)=>{
@@ -35,6 +35,6 @@ export const ProductSection=({
                     </div>
                 )
             }
-        </>
+        </div>
     )
 }

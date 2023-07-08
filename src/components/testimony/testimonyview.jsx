@@ -6,7 +6,7 @@ export const TestimonyView =()=>{
     return(
         <>
             <SimpleSection/>
-            <div className="px-10 py-4">
+            <div className="px-10 py-4 bg-ghostwhite mx-4">
                 <CustomersReview/>
                 <BlogSection/>
             </div>

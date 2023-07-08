@@ -15,7 +15,7 @@ export const BlogSection=()=>{
                 style="ln-20 h7 text-center c-grey mb-3 "
                 value="Creativity is a highfalutin word for the work I have to do between now and Tuesday."
             />
-            <div className="d-flex wrap justify-content-center">
+            <div className="d-flex wrap justify-content-center ">
                 {
                     [
                         {

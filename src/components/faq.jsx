@@ -1,17 +1,22 @@
 import { Text } from "../element/text"
 import faqImg from "../assets/Question Mark cr-fr.svg";
+import { RevealAnimation } from "./reveal";
 
 export const FaqSection =()=>{
     return(
         <div className="d-flex flex-column justify-content-center px-10 py-5">
-            <Text
-                value="Frequently asked questions"
-                style="fs-4 fw-bold mb-2"
-            />
-            <Text
-                value="Get the best services at the lowest price"
-                style="h-0-5 c-grey mb-3"
-            />
+            <RevealAnimation>
+                <Text
+                    value="Frequently asked questions"
+                    style="fs-4 fw-bold mb-2"
+                />
+            </RevealAnimation>
+            <RevealAnimation>
+                <Text
+                    value="Get the best services at the lowest price"
+                    style="h-0-5 c-grey mb-3"
+                />
+            </RevealAnimation>
             <div className="row">
                 {
                     [
@@ -46,20 +51,26 @@ export const FaqSection =()=>{
                             >
                                 <div className="p-2 d-flex flex-row wrap align-items-start justify-content-start">
                                     <div className="me-3">
-                                        <img 
-                                            src={faqImg}
-                                            alt="object not found"
-                                        />
+                                        <RevealAnimation>
+                                            <img 
+                                                src={faqImg}
+                                                alt="object not found"
+                                            />
+                                        </RevealAnimation>
                                     </div>
                                     <div className="d-flex flex-column wt-83">
-                                        <Text
-                                            style="h7 fw-bold text-start ln-20"
-                                            value={heading}
-                                        />
-                                        <Text
-                                            style="h-0-5 text-break justify ln-20 fgw-light ln-20"
-                                            value={content}
-                                        />
+                                        <RevealAnimation>
+                                            <Text
+                                                style="h7 fw-bold text-start ln-20"
+                                                value={heading}
+                                            />
+                                        </RevealAnimation>
+                                        <RevealAnimation>
+                                            <Text
+                                                style="h-0-5 text-break justify ln-20 fgw-light ln-20"
+                                                value={content}
+                                            />
+                                        </RevealAnimation>
                                     </div>
                                 </div>
                             </div>

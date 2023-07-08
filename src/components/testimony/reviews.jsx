@@ -5,6 +5,7 @@ import ellipse2 from "../../assets/Ellipse 4 (1).svg"
 import ellipse3 from "../../assets/Ellipse 4.svg"
 import { Person } from "./person";
 import { Text } from "../../element/text";
+import { RevealAnimation } from "../reveal";
 
 
 export const CustomersReview =()=>{
@@ -43,14 +44,18 @@ export const CustomersReview =()=>{
     };
     return (
       <div className="mb-5">
-            <Text
-                style="c-purple h7 text-start mb-2"
-                value="What customers says"
-            />
-            <Text
-                style="fs-4 fw-bold text-start mb-2"
-                value="Recent Reviews"
-            />
+            <RevealAnimation>
+                <Text
+                    style="c-purple h7 text-start mb-2"
+                    value="What customers says"
+                />
+            </RevealAnimation>
+            <RevealAnimation>
+                <Text
+                    style="fs-4 fw-bold text-start mb-2"
+                    value="Recent Reviews"
+                />
+            </RevealAnimation>
             <div>
                 <Slider {...settings}>
                     {
@@ -70,30 +75,38 @@ export const CustomersReview =()=>{
                                 <div     
                                     key={index}
                                 >
-                                    <div className="rounded review-p m-2 shadow border">
-                                            <Text
-                                                style="h7 ln-20 c-grey text-start justify mb-3"
-                                                value="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam."
-                                            />
+                                    <RevealAnimation>
+                                        <div className="rounded review-p m-2 bg-white border">
+                                            <RevealAnimation>
+                                                <Text
+                                                    style="h7 ln-20 c-grey text-start justify mb-3"
+                                                    value="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam."
+                                                />
+                                            </RevealAnimation>
                                             <div  className="d-flex justify-content-between wrap align-items-center">
+                                                <div>      
+                                                    <RevealAnimation>
+                                                        <Person
+                                                            src={img}
+                                                        />
+                                                    </RevealAnimation>
+                                                 </div>
                                                 <div>
-                                                    <Person
-                                                        src={img}
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <Rating
-                                                        initialValue={3}
-                                                        fillColor = '#FF9E2A'
-                                                        className="mb-4"
-                                                        size={16}
-                                                        readonly={true}
-                                                    />
+                                                    <RevealAnimation>
+                                                        <Rating
+                                                            initialValue={3}
+                                                            fillColor = '#FF9E2A'
+                                                            className="mb-4"
+                                                            size={16}
+                                                            readonly={true}
+                                                        />
+                                                    </RevealAnimation>
                                                 </div>
                                             </div>
-                                        
-                                        </div>
-                                    </div>
+                                            </div>
+                                    </RevealAnimation>
+                                </div>
+                                    
                             )
                         })
                     }

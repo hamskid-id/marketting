@@ -3,6 +3,7 @@ import { Text } from "../../element/text"
 import { InputField } from "../customFormField";
 import { useForm } from "react-hook-form";
 import bg from  "../../assets/RectangleContact 1.svg";
+import { RevealAnimation } from "../reveal";
 
 export const Contact =()=>{
     
@@ -32,13 +33,17 @@ export const Contact =()=>{
                 className="wt-50 contact-bg p-5"
                 style={{backgroundImage: `url("${bg}")`}}
             >
-                <Text style="fw-bold text-white m-auto ln-62 fw-bold ln-64 h-3rem" value="We'd love to hear from you"/>
+                <RevealAnimation>
+                    <Text style="fw-bold text-white m-auto ln-62 fw-bold ln-64 h-3rem" value="We'd love to hear from you"/>
+                </RevealAnimation>
             </div>
             <div className="wt-50 p-5">
-                <Text
-                    style="fs-5 text-start fw-bold my-3"
-                    value="Contact Us"
-                />
+                <RevealAnimation>
+                    <Text
+                        style="fs-5 text-start fw-bold my-3"
+                        value="Contact Us"
+                    />
+                </RevealAnimation>
                 <form  onSubmit={handleSubmit(SubmitHandler)}>
                     {
                         [
@@ -80,23 +85,28 @@ export const Contact =()=>{
                                 error
                             }=option;
                             return(
-                                <InputField
-                                    placeHolder={placeholder}
-                                    name={name}
-                                    type={type}
-                                    errors={error}
-                                    register={register}
-                                    labelTitle={label}
-                                    labelStyle="c-grey h7"
-                                    style="btn border rounded p-2 w-100 text-start mb-2"
-                                />
+                                <RevealAnimation>       
+                                    <InputField
+                                        placeHolder={placeholder}
+                                        name={name}
+                                        type={type}
+                                        errors={error}
+                                        register={register}
+                                        labelTitle={label}
+                                        labelStyle="c-grey h7"
+                                        style="btn border rounded p-2 w-100 text-start mb-2"
+                                    />
+                                </RevealAnimation>
+                                
                             )
                         })
                     }
-                    <Btn
-                        style="btn w-100 btn-md my-2 bg-purple text-white"
-                        value="Send Message"
-                    />
+                    <RevealAnimation>
+                        <Btn
+                            style="btn w-100 btn-md my-2 bg-purple text-white"
+                            value="Send Message"
+                        />
+                    </RevealAnimation>
                 </form>
             </div>
         </div>

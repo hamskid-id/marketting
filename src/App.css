@@ -48,6 +48,12 @@ textarea{
 .bg-dark-grey{
   background-color: #F0F0F0;
 }
+.bg-ghostwhite{
+  background-color: ghostwhite;
+}
+.border-gainsboro{
+  border:1px solid gainsboro;
+}
 .cart{
   padding: 0.1rem;
 }
@@ -72,10 +78,10 @@ textarea{
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.c-purple{
+.c-blue{
   color:#444BD3;
 }
-.bg-purple{
+.bg-blue{
   background-color: #444BD3;
 }
 .border-light-green{
@@ -363,6 +369,10 @@ textarea{
 }
 }
 @media only screen and (min-width:320px) and (max-width:570px){
+  .mx-4{
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
   .wereHere{
     font-size: calc(1.3rem + .6vw)!important;
     margin-bottom: 0rem;
