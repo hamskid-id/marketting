@@ -461,3 +461,8 @@ textarea{
   padding-right: 1rem;
 }
 }
+@media only screen and (min-width:320px) and (max-width:374px){
+  .copywrite{
+    width:100%;
+  }
+}

@@ -180,7 +180,7 @@ export const Footer =()=>{
         </RevealAnimation>
         <div className="m-auto mt-5">
             <RevealAnimation>
-                <img src={copywright} alt="object not found"/>
+                <img src={copywright} alt="object not found" className="copywrite"/>
             </RevealAnimation>
         </div>
         </div>
