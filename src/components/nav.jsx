@@ -1,6 +1,7 @@
 import { Text } from "../element/text"
 import brand from "../assets/onDark.svg";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export const Nav=({
     routeTitle
@@ -9,6 +10,10 @@ export const Nav=({
     return(
         <nav className="navbar navbar-expand-lg navbar-light pt-3 pb-3 w-100">
         <div className="container-fluid">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>FreshBB - {routeTitle}</title>
+            </Helmet>
             <div>
                 <img 
                     src={brand}
@@ -55,7 +60,7 @@ export const Nav=({
                             <Link
                                 key={index}
                                 to={route}
-                                className={`${routeTitle == name? "bg-purple text-white rounded py-2 px-3":"c-grey-black"} h6 w-fit-content text-start`}
+                                className={`${routeTitle == name? "bg-purple text-white rounded py-2 px-3":"c-grey-black"} h6 fw-light w-fit-content text-start`}
                                 >{name}
                             </Link>
                         )
