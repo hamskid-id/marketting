@@ -20,7 +20,7 @@ export const HelpComponent =()=>{
                 </RevealAnimation>
                 <RevealAnimation>
                     <Text
-                        style="ln-36 c-grey-black h6 mb-3 text-start fgw-light justify"
+                        style="ln-36 c-grey-black fs-5 mb-3 text-start fw-light justify"
                         value="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
                     />
                 </RevealAnimation>

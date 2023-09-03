@@ -1,4 +1,6 @@
-export const AlertModal =({title,body,hidemodal})=>{
+import { Btn } from "../element/btn"
+
+export const AlertModal =({title,body,hidemodal,showmodal})=>{
     return(
         <div
             className="modal fade" 
@@ -19,6 +21,13 @@ export const AlertModal =({title,body,hidemodal})=>{
                             ref={hidemodal}
                             aria-label="Close">
                         </button>
+                        <Btn
+                            style="bg-purple h-0-5 btn-md p-2 text-white ms-auto px-4 w-fit-content"
+                            value="pay Now"
+                            databstoggle="modal" 
+                            databstarget="#alertStaticBackdrop"
+                            ref={showmodal}
+                        /> 
                     </div>
                     <div className="modal-body">
                         {body}

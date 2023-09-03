@@ -14,7 +14,7 @@ export const TrustedSec =()=>{
                 <RevealAnimation>
                     <Text
                         value="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
-                        style="h7 text-center c-grey mb-5"
+                        style="fs-6 fw-light text-center c-grey mb-5"
                     />
                 </RevealAnimation>
             </div>
@@ -46,13 +46,13 @@ export const TrustedSec =()=>{
                                     >
                                         <RevealAnimation>
                                             <Text 
-                                                style="fw-bolder fs-4 text-center c-purple"
+                                                style="fw-bolder fs-2 text-center c-purple mb-2"
                                                 value={amount}
                                             />
                                         </RevealAnimation>
                                         <RevealAnimation>
                                             <Text 
-                                                style="fw-bold text-center c-grey trust-bottom-text"
+                                                style=" text-center c-grey trust-bottom-text fs-6 fw-light"
                                                 value={text}
                                             />
                                         </RevealAnimation>

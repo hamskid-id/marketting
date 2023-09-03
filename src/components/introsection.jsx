@@ -15,7 +15,7 @@ export const IntroSection =()=>{
             <RevealAnimation>
 
             <Text
-                style="ln-36 c-grey-black h6 mb-3"
+                style="ln-36 c-grey-black fs-5 mb-3"
                 value="Build alongside half a million developers and businesses like you."
             />
             </RevealAnimation>

@@ -22,21 +22,21 @@ export const ProductCard =({img,title,company,price1,price2,sales,id})=>{
                         <RevealAnimation>
                             <Text
                                 value={title}
-                                style="fw-bold h8 text-start mb-2 h7"
+                                style="fw-bold fs-5 text-start mb-2 h7"
                             />
                         </RevealAnimation>
                         <RevealAnimation>
                             <Text
                                 value={company}
-                                style="h-0-5 c-dark-grey text-start  mb-2 fgw-light"
+                                style="fs-6 c-dark-grey text-start  mb-2 fw-light"
                             />
                         </RevealAnimation>
                         <RevealAnimation>
                             <div className="d-flex align-items-center h7">
-                                <span className="me-2 fw-bold h7 text-danger text-decoration-line-through">
+                                <span className="me-2 fw-bold fs-6 text-danger text-decoration-line-through">
                                     ${price1}
                                 </span>
-                                <span  className="me-2 h7 fw-bold">
+                                <span  className="me-2 fs-6 fw-bold">
                                     ${price2}
                                 </span>
                             </div>
@@ -44,7 +44,7 @@ export const ProductCard =({img,title,company,price1,price2,sales,id})=>{
                         <RevealAnimation>
                             <div className="d-flex wrap align-items-center justify-content-between mt-3">
                                 <Text
-                                    style="h7 c-dark-grey fgw-light"
+                                    style="fs-6 c-dark-grey fw-light mb-2"
                                     value={`${sales} sales`}
                                 />
                                 <div className="d-flex align-items-center justify-content-end">
@@ -54,7 +54,7 @@ export const ProductCard =({img,title,company,price1,price2,sales,id})=>{
                                             className="c-dark-grey"
                                         />
                                     </span>
-                                    <span className="border-cyan c-light-purple px-2  py-1 h7 rounded btn">
+                                    <span className="border-cyan c-light-purple px-2  py-1 fs-6 rounded btn">
                                         Live Preview
                                     </span>
                                 </div>

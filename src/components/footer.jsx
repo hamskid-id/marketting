@@ -25,7 +25,7 @@ export const Footer =()=>{
                 </RevealAnimation>
                 <RevealAnimation>
                     <Text
-                        style="ln-20 h7 mb-3 text-start c-grey"
+                        style="ln-36 fs-6 mb-3 text-start c-grey fw-light"
                         value="Making the world a better place through constructing elegant hierarchies"
                     />
                 </RevealAnimation>
@@ -147,7 +147,7 @@ export const Footer =()=>{
                                 >
                                     <RevealAnimation>
                                         <Text
-                                            style="c-grey h7 mb-3 text-start"
+                                            style="c-grey fs-6 mb-3 text-start"
                                             value={title}
                                         />
                                     </RevealAnimation>
@@ -161,7 +161,7 @@ export const Footer =()=>{
                                                 <Link
                                                         to={route}
                                                         key={index}
-                                                        className="text-white h-0-5 mb-3 text-start"
+                                                        className="text-white fs-6 mb-3 text-start"
                                                 ><RevealAnimation>
                                                         {name}
                                                     </RevealAnimation>

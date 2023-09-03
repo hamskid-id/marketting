@@ -2,11 +2,33 @@ import { useRef, useState } from "react"
 import { Text } from "../../element/text"
 import { FormField } from "./formField"
 import { AmountPaying } from "./payingInfo"
-import { SuccessAlert } from "./successAlert"
+import { FailureAlert, PendingAlert, SuccessAlert } from "./successAlert"
 import { AlertModal } from "../alertModal"
+import {useSelector} from "react-redux";
+import { useParams } from "react-router-dom"
+import Spinner from "../spinners/spinners"
+import { useEffect } from "react"
 
 export const PaymentScreen =()=>{
     const hidemodal = useRef(null);
+    const{id} = useParams()
+    const{
+        paySt
+    }= useSelector((state)=>state.product);
+     const[formInput, setFormInput] = useState({
+        email:'',
+        cardName:'',
+        cardNumber:'',
+        date:'',
+        cvc:'',
+        discountCode:''
+    })
+    const {products,getProdSt} =useSelector(state=>state.product);
+    const productToPay = products?.find(prod=>prod.id == id);
+    
+    if(getProdSt ==="pending"){
+        return <Spinner/>
+    }
     return(
         <>
         <div className="px-10 pb-5 pt-3">
@@ -21,14 +43,23 @@ export const PaymentScreen =()=>{
                         value="To start your subscription, input your card details to make payment. 
                         You will be redirected to your banks authorization page . "
                     />
-                    <FormField/>
+                    <FormField formInput={formInput} setFormInput={setFormInput} productToPay ={productToPay} hidemodal={hidemodal}/>
                 </div>
                 <div className="w-25 m-auto">
-                    <AmountPaying/>
+                    <AmountPaying formInput={formInput} productToPay={productToPay}/>
                 </div>
             </div>
         </div>
-        <AlertModal body={<SuccessAlert hidemodal={hidemodal}/>} hidemodal={hidemodal}/>
+        {/* <AlertModal 
+            body={
+                paySt ==="pending"?
+                    <PendingAlert hidemodal={hidemodal}  showmodal={showmodal}/>:
+                    (paySt ==="failed" || paySt ==="rejected") ?
+                    <FailureAlert hidemodal={hidemodal}  showmodal={showmodal}/>:
+                    <SuccessAlert hidemodal={hidemodal}  showmodal={showmodal}/>
+            } 
+            hidemodal={hidemodal}
+        /> */}
         </>
     )
 }

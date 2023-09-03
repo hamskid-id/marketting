@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux"
 import { NaviBtn } from "../element/navigateBtn"
 import { ProductCard } from "./productCard"
 
@@ -5,21 +6,25 @@ export const ProductSection=({
     prod,
     collpase
 })=>{
+    const {products} =useSelector(state=>state.product);
     return(
         <div className="bg-ghostwhite py-3">
         <div className="row w-100 p-4">
                 {
-                    prod.map((prod,index)=>{
+                    products?.map((prod,index)=>{
+                        const{
+                            id,prod_amount,prod_description,prod_name,prod_picture,prod_quantity
+                        }=prod
                         return(
                             <ProductCard
                                 key={index}
-                                img={prod.img}
-                                id={prod.id}
-                                title="Mage vpn site Sale and aution SIte"
-                                company="by 5starcompany"
+                                img={prod_picture}
+                                id={id}
+                                title={prod_name}
+                                company={prod_description}
                                 price1={15}
                                 price2={13}
-                                sales={55}
+                                sales={prod_amount}
                             />
                         )
                     })

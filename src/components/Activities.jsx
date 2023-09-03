@@ -52,18 +52,18 @@ export const Activities =()=>{
                                 <RevealAnimation>
                                     <Text
                                         value={title}
-                                        style="fw-bold h7 mb-3 text-start"
+                                        style="fw-bold fs-5 mb-3 text-start"
                                     />
                                 </RevealAnimation>
                                 <RevealAnimation>
                                     <Text
                                         value={text}
-                                        style="c-dark-grey h7 mb-3 text-break text-start ln-20 fgw-light"
+                                        style="c-dark-grey fs-6 fw-light mb-3 text-break text-start ln-36"
                                     />
                                 </RevealAnimation>
                                 <RevealAnimation>
                                     <div className="d-flex align-items-center">
-                                        <span className="c-purple h7 me-1 text-start fw-bold">
+                                        <span className="c-purple fs-6 me-1 text-start fw-bold">
                                             Learn More
                                         </span>
                                         <AiOutlineArrowRight

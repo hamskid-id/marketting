@@ -1,48 +1,34 @@
 import { Text } from "../element/text"
 import faqImg from "../assets/Question Mark cr-fr.svg";
 import { RevealAnimation } from "./reveal";
+import { useSelector } from "react-redux";
+import Spinner from "./spinners/spinners";
 
 export const FaqSection =()=>{
+    const { faq,getFagSt} = useSelector(state=>state.product);
+    if(getFagSt ==="pending"){
+        return <Spinner/>
+    }
     return(
         <div className="d-flex flex-column justify-content-center px-10 py-5">
             <RevealAnimation>
                 <Text
                     value="Frequently asked questions"
-                    style="fs-4 fw-bold mb-2"
+                    style="fs-2 fw-bold mb-2"
                 />
             </RevealAnimation>
             <RevealAnimation>
                 <Text
                     value="Get the best services at the lowest price"
-                    style="h-0-5 c-grey mb-3"
+                    style="fs-6 c-grey mb-3 fw-light"
                 />
             </RevealAnimation>
             <div className="row">
                 {
-                    [
-                        {
-                            heading:"How long do payouts take?",
-                            content:"Once you’re set up, payouts arrive in your bank account on a 2-day rolling basis. Or you can opt to receive payouts weekly or monthly."
-                        },{
-                            heading:"How much do disputes cost?",
-                            content:"Disputed payments (also known as chargebacks) incur a $15.00 fee. If the customer’s bank resolves the dispute in your favor, the fee is fully refunded."
-                        },{
-                            heading:"How much do disputes cost?",
-                            content:"Disputed payments (also known as chargebacks) incur a $15.00 fee. If the customer’s bank resolves the dispute in your favor, the fee is fully refunded."
-                        },{
-                            heading:"How much do disputes cost?",
-                            content:"Disputed payments (also known as chargebacks) incur a $15.00 fee. If the customer’s bank resolves the dispute in your favor, the fee is fully refunded."
-                        },{
-                            heading:"How long do payouts take?",
-                            content:"Once you’re set up, payouts arrive in your bank account on a 2-day rolling basis. Or you can opt to receive payouts weekly or monthly."
-                        },{
-                            heading:"How much do disputes cost?",
-                            content:"Disputed payments (also known as chargebacks) incur a $15.00 fee. If the customer’s bank resolves the dispute in your favor, the fee is fully refunded."
-                        }
-                    ].map((questions,index)=>{
+                    faq?.map((questions,index)=>{
                         const{
-                            heading,
-                            content
+                            answer,
+                            question
                         }=questions;
                         return(
                             <div 
@@ -61,14 +47,14 @@ export const FaqSection =()=>{
                                     <div className="d-flex flex-column wt-83">
                                         <RevealAnimation>
                                             <Text
-                                                style="h7 fw-bold text-start ln-20"
-                                                value={heading}
+                                                style="fs-6 fw-bold text-start ln-20 mb-2"
+                                                value={question}
                                             />
                                         </RevealAnimation>
                                         <RevealAnimation>
                                             <Text
-                                                style="h-0-5 text-break justify ln-20 fgw-light ln-20"
-                                                value={content}
+                                                style="fs-6 text-break justify ln-20 fgw-light "
+                                                value={answer}
                                             />
                                         </RevealAnimation>
                                     </div>

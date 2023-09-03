@@ -1,6 +1,6 @@
 import { Text } from "../../element/text"
 
-export const AmountPaying =()=>{
+export const AmountPaying =({productToPay,formInput})=>{
     return(
         <div className="p-3 rounded bg-dark-grey">
             <Text
@@ -8,17 +8,17 @@ export const AmountPaying =()=>{
                 value="You're paying"
             />
             <Text
-                style=" display-5 mb-3 text-center fw-bold"
-                value="$450"
+                style=" fs-4 mb-3 text-center fw-bold"
+                value={`$${productToPay?.prod_amount}`}
             />
             <div className="d-flex align-items-center justify-content-between">
                 <Text
                     style="fw-bold h7 mb-2 break"
-                    value="Recharge printed site"
+                    value={`$${productToPay?.prod_name}`}
                 />
                 <Text
                     style="c-grey h7 mb-2"
-                    value="$400"
+                    value={`$${productToPay?.prod_amount}`}
                 />
             </div>
             <div className="d-flex lign-items-center">
@@ -28,7 +28,7 @@ export const AmountPaying =()=>{
                 />
                 <Text
                     style="c-grey h-0-5 mb-2"
-                    value="React Native"
+                    value={`$${productToPay?.prod_name}`}
                 />
             </div>
             <div>

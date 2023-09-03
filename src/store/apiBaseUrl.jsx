@@ -1,0 +1,1 @@
+export const apiBaseUrl = "https://freshbb.staging.5starcompany.com.ng/api";

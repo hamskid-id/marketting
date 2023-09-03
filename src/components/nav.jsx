@@ -55,7 +55,7 @@ export const Nav=({
                             <Link
                                 key={index}
                                 to={route}
-                                className={`${routeTitle == name? "bg-purple text-white rounded py-2 px-3":"c-grey-black"} h7 w-fit-content text-start`}
+                                className={`${routeTitle == name? "bg-purple text-white rounded py-2 px-3":"c-grey-black"} h6 w-fit-content text-start`}
                                 >{name}
                             </Link>
                         )

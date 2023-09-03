@@ -6,9 +6,10 @@ import ellipse3 from "../../assets/Ellipse 4.svg"
 import { Person } from "./person";
 import { Text } from "../../element/text";
 import { RevealAnimation } from "../reveal";
-
+import { useSelector } from "react-redux";
 
 export const CustomersReview =()=>{
+    const{review} = useSelector(state=>state.product);
     const settings = {
       dots: true,
       infinite: true,
