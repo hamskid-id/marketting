@@ -11,7 +11,6 @@ import { TestimonyPage } from './pages/testimonypage';
 import store from './store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import 'sweetalert2/src/sweetalert2.scss'
 import { Provider } from 'react-redux';
 
 function App() {

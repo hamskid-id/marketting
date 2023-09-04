@@ -4,6 +4,7 @@ import { FormField } from "./formField"
 import { AmountPaying } from "./payingInfo"
 import { useParams } from "react-router-dom"
 import Spinner from "../spinners/spinners"
+import { useSelector } from "react-redux"
 
 export const PaymentScreen =()=>{
     const hidemodal = useRef(null);
