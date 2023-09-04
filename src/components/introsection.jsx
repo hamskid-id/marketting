@@ -8,7 +8,7 @@ export const IntroSection =()=>{
             <RevealAnimation>
                 
             <Text
-                style="ln-62 fw-bold ln-64 h-3rem mb-3"
+                style="ln-62 fw-bold ln-64 h-3rem mb-3 design"
                 value="Design is intelligence made visible"
             />
             </RevealAnimation>

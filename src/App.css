@@ -2,7 +2,8 @@
   margin: 0 auto;
   text-align: center;
   height:100vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+
 }
 .review-p{
   padding: 1.5rem;
@@ -61,7 +62,7 @@ textarea{
   margin-bottom: 0.1rem;
 }
 .h-3rem{
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .h7{
   font-size: 0.8rem;
@@ -248,11 +249,14 @@ textarea{
 .wt-35{
   width: 35%;
 }
+.break{
+  word-break: break-all;
+}
 .wt-45{
   width: 45%;
 }
 .ln-62{
-  line-height:62px ;
+  line-height:82px ;
 }
 .justify{
   text-align: justify;
@@ -306,6 +310,9 @@ textarea{
     transform: rotate(360deg);
   }
 }
+.wereHere{
+  line-height:52px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -350,6 +357,27 @@ textarea{
   margin-left: 1rem;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
+  
+.design{
+  word-break: inherit;
+}
+  .pe-10 {
+    padding-right: 3rem;
+}
+.ps-10 {
+  padding-left: 3rem;
+}
+.active {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+  .px-10 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+  .introText {
+    width: 70%;
+}
 .productSideImgContainer{
   width: 100vw;
   overflow-x: auto;
@@ -369,12 +397,21 @@ textarea{
 }
 }
 @media only screen and (min-width:320px) and (max-width:570px){
+  .ln-62 {
+    line-height: 72px;
+}
+.break {
+    word-break: inherit;
+}
+.h-3rem {
+    font-size: 3.5rem;
+}
   .mx-4{
     margin-left: 0!important;
     margin-right: 0!important;
   }
   .wereHere{
-    font-size: calc(1.3rem + .6vw)!important;
+    margin-top:1rem;
     margin-bottom: 0rem;
   }
   .filterImg{

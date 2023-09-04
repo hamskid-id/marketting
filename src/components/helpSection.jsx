@@ -14,7 +14,7 @@ export const HelpComponent =()=>{
             <div className="d-flex flex-column justify-content-start align-items-start wt-50 left-help">
                 <RevealAnimation>
                     <Text
-                        style="ln-62 fw-bold ln-64 wereHere text-start justify"
+                        style="fw-bold wereHere text-start justify display-6"
                         value="We’re here to help"
                     />
                 </RevealAnimation>

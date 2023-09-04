@@ -6,7 +6,7 @@ import { RevealAnimation } from "./reveal";
 export const ProductCard =({img,title,company,price1,price2,sales,id})=>{
     const navigate = useNavigate();
     return(
-        <div className="col-md-4 col-lg-3 mb-2 col-sm-6"
+        <div className="col-md-5 col-lg-3 mb-2 col-sm-6"
         >
             <RevealAnimation>
                 <div className="border rounded m-3 bg-white">

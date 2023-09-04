@@ -7,7 +7,7 @@ import { RevealAnimation } from "./reveal";
 
 export const Activities =()=>{
     return(
-        <div className="row active w-100">
+        <div className="row active w-100 wrap">
             {
                 [
                     {

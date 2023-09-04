@@ -2,19 +2,12 @@ import { useRef, useState } from "react"
 import { Text } from "../../element/text"
 import { FormField } from "./formField"
 import { AmountPaying } from "./payingInfo"
-import { FailureAlert, PendingAlert, SuccessAlert } from "./successAlert"
-import { AlertModal } from "../alertModal"
-import {useSelector} from "react-redux";
 import { useParams } from "react-router-dom"
 import Spinner from "../spinners/spinners"
-import { useEffect } from "react"
 
 export const PaymentScreen =()=>{
     const hidemodal = useRef(null);
     const{id} = useParams()
-    const{
-        paySt
-    }= useSelector((state)=>state.product);
      const[formInput, setFormInput] = useState({
         email:'',
         cardName:'',
@@ -50,16 +43,6 @@ export const PaymentScreen =()=>{
                 </div>
             </div>
         </div>
-        {/* <AlertModal 
-            body={
-                paySt ==="pending"?
-                    <PendingAlert hidemodal={hidemodal}  showmodal={showmodal}/>:
-                    (paySt ==="failed" || paySt ==="rejected") ?
-                    <FailureAlert hidemodal={hidemodal}  showmodal={showmodal}/>:
-                    <SuccessAlert hidemodal={hidemodal}  showmodal={showmodal}/>
-            } 
-            hidemodal={hidemodal}
-        /> */}
         </>
     )
 }
